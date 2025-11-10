@@ -56,7 +56,7 @@ export default function Register() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-amber-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-2xl mx-auto">
         <Link to={createPageUrl("Homepage")}>
-          <Button variant="ghost" className="mb-6">
+          <Button variant="ghost" className="mb-6 flex items-center justify-center gap-2">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home
           </Button>
@@ -225,17 +225,20 @@ export default function Register() {
               </>
             )}
 
-            <Button 
-              type="submit"
-              className={`w-full h-12 text-lg transition-transform hover:scale-105 ${
-                userType === "customer" 
-                  ? "bg-blue-600 hover:bg-blue-700" 
-                  : "bg-amber-500 hover:bg-amber-600"
-              }`}
-            >
-              <UserPlus className="w-5 h-5 mr-2" />
-              Create Account
-            </Button>
+          <Button 
+            type="submit"
+            className={`flex items-center justify-center gap-2 
+                        w-full h-12 text-lg font-medium text-white 
+                        transition-transform hover:scale-105 rounded-lg
+                        ${
+                          userType === "customer" 
+                            ? "bg-blue-600 hover:bg-blue-700" 
+                            : "bg-amber-500 hover:bg-amber-600"
+                        }`}
+          >
+            <UserPlus className="w-5 h-5" />
+            <span>Create Account</span>
+          </Button>
           </form>
 
           {/* Login Link */}

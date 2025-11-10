@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
 import { toast } from "sonner";
+import LocationMap from "./LocationMap";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -123,7 +124,9 @@ export default function Contact() {
 
               <Button 
                 type="submit"
-                className="w-full bg-blue-600 hover:bg-blue-700 h-12 text-lg transition-transform hover:scale-105"
+                className="flex items-center justify-center gap-2 
+                        w-full h-12 text-lg font-medium text-white 
+                        transition-transform hover:scale-105 rounded-lg"
               >
                 <Send className="w-5 h-5 mr-2" />
                 Send Message
@@ -157,12 +160,8 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Map Placeholder */}
-            <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-              <div className="h-64 bg-gray-200 flex items-center justify-center">
-                <MapPin className="w-12 h-12 text-gray-400" />
-              </div>
-            </div>
+            <LocationMap />
+
           </div>
         </div>
       </div>
