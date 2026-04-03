@@ -7,7 +7,7 @@ import { getAuth } from 'firebase/auth';
 // For real-time updates (technicians and bookings), you only need Firestore (projectId, apiKey, etc.)
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY || "AIzaSyB8vPBL3lO4zwWE-Z95Q-dffY9Dvykm2jo",
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN || "homeease-f7443.firebaseapp.com",
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN || "  ",
   projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID || "homeease-f7443",
   storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET || "homeease-f7443.firebasestorage.app",
   messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID || "284216468156",
